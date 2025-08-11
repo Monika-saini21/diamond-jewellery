@@ -30,31 +30,8 @@ function Items(){
 
 
 
-//         <div className=' max-w-[100vw]'>
-//           <div className=' bg-gray-800 flex flex-col object-fit items-center pb-22 '>
-//             <h className=' text-cyan-50 pt-8 text-2xl border-b fot-bold'>Best Diamond That You Loved ♡</h>
-//             <div class=' gap-x-16 cursor-pointer h-55 object-cover pt-6 flex justify-center flex-wrap '>
-//                 <img className=' rounded-3xl' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDA2I4PgLzqP7r9_pTjDVU2AIHoUtkfBINMw&s"/>
-//                 <img className=' rounded-3xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCdVXsatKdAxulFKjfLnmvfkPT5dDbFLwLfg&s'/>
-//                 <img className=' rounded-3xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWl1930bglfbb9xruGtx2EL2ib9YodZEEtFg&s'/>
-//                 <img className=' rounded-3xl' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTLC8oIoMxOBNdVYgJH5NBemgZLMi_m00ffLIrwa8Ar4rlXDxnwZkRMYRXd1COagquIq0&usqp=CAU'/>
-                
-//             </div>
-//          </div>
-//          <Category/>
-//          <div>
-//          <img className='w-400 h-95 pt-10' src='https://cdn.shopify.com/s/files/1/1834/6621/collections/Solid-Gold-Jewellery_4201d48f-b8c7-4411-b770-571e31a0af8e.jpg?v=1700066201'  alt='' />
-//          <h className='font-mono font-bold text-4xl flex relative bottom-70 left-130 text-white h-0 w-90'>From The Source</h>
-//          <p className=" font-extralight text-2xl flex relative bottom-55 left-120 text-white h-0 max-w-100">Handcrafting the world's best diamonds starts with knowing where they come from.<br></br>
-//             we proudly trace 100% of our rough diamonds to known mines and sources.</p> 
-//         <p className=" cursor-pointer underline font-semibold text-2xl flex relative bottom-10 left-128 text-white w-90">Follow Your Diamond Journey</p>    
-//         </div>
-//          </div>
+
      );
  }
 export default Items;
 
-// <img className='cursor-pointer h-55 w-60 object-cover  pt-6 relative right-37' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDA2I4PgLzqP7r9_pTjDVU2AIHoUtkfBINMw&s"/>
-//             <img className='cursor-pointer h-55 w-60 object-cover  pt-6 relative bottom-55 right-115' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTipBI7brx2GFKCBP0D1qquRbhQDpHNKgq05VLJ5F7fzia74uwLh4fNBJzmvxCI7LaF0&usqp=CAU'/>
-//             <img className='cursor-pointer h-55 w-60 object-cover  pt-6 relative bottom-110 left-40' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWl1930bglfbb9xruGtx2EL2ib9YodZEEtFg&s'/>
-//             <img className='cursor-pointer h-55 w-60 object-cover  pt-6 relative bottom-165 left-115' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTLC8oIoMxOBNdVYgJH5NBemgZLMi_m00ffLIrwa8Ar4rlXDxnwZkRMYRXd1COagquIq0&usqp=CAU'/>
