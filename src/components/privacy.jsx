@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function privacy() {
   return (
     <>  
-        <a href='/' className='p-4 text-gray-600  hover:text-yellow-600'>HOME</a><a href='/privacy-policy' className='border-l-2 border-l-gray-600 pl-3 text-gray-600 hover:border-l-gray-600 hover:text-yellow-600'>Privact Policy</a>
+        <Link to='/' className='p-4 text-gray-600  hover:text-yellow-600'>HOME</Link><Link to='/privacy-policy' className='border-l-2 border-l-gray-600 pl-3 text-gray-600 hover:border-l-gray-600 hover:text-yellow-600'>Privact Policy</Link>
         <h1 className='text-3xl  m-7 flex justify-center items-center underline'>Privact Policy</h1>
         <div className='flex justify-center items-center '>
         <div className='text-gray-600 bg-stone-50 w-300 p-5 rounded-3xl '>
