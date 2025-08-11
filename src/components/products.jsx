@@ -8,7 +8,7 @@ import redHeart from "../assets/heart.png"
 import Slider from "react-slick"
 import"slick-carousel/slick/slick.css"
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+
 
 import"slick-carousel/slick/slick-theme.css"
 
@@ -74,7 +74,7 @@ function Products(){
             setCartItem([...cartItem, {product,quantity}]) 
 
         }
-        toast.success("product added to cart!");
+      
        
     }
         let product=Datas.filter(data=> data.id==id)[0]

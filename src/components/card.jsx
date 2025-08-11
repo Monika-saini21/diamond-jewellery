@@ -7,15 +7,13 @@ import ringbanner from "../assets/ringbanner.jpg"
 import braclatebanner from "../assets/braclatebanner.jpg"
 import nacklacebanner from "../assets/nacklacebanner.jpg"
 import earringbanner from "../assets/earringbanner.jpg"
-import Datas from '../utils/datas.js'
+
 
 function Header(){
-    // console.log(datas[0].category)
-    
-    // const data=datas[0]
+   
     let Category=useParams()
 
-    const {cartItem,setCartItem,cartQuantity,setCartQuantity,wishListItem,setWishLisItem,searchlist,setSearchList}=useContext(UserContext)
+    const {cartItem,setCartItem,cartQuantity,setCartQuantity,wishListItem,setWishLisItem}=useContext(UserContext)
 
     const [quantity,setQuantity]=useState(1)
 
@@ -134,7 +132,7 @@ function Header(){
                                     {/* <div >
                                     <p  >★{data.rate}</p>
                                     </div> */}
-                                    <div className=' flex flex-col items-start bg-white pt-2'>
+                                    <div className='pl-3 flex flex-col items-start bg-white pt-2'>
             
                                          <p className=' text-yellow-600 text-xs font-serif w-58 truncate '> {data.title}</p>
                                          <p className=' font-bold font-sans mb-2'>₹{data.price}<p className='text-xs'>(MRP Inclusive of all taxes)</p></p>
