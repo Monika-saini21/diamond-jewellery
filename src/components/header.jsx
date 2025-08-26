@@ -16,34 +16,64 @@ function Header() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000, 
+        autoplaySpeed: 2000,
     };
 
     return (
-        <div className="flex justify-center">
-            <Slider className="w-[95vw]" {...settings}>
-                <div>
-                    <img className="w-[100vw] h-[45vw]" src={header} alt="Header" />
+        <div className="w-full mt-5 md:mt-0 overflow-hidden"> 
+            <Slider
+                {...settings}
+                className="w-full overflow-hidden"  // <-- force full width
+            >
+                {/* Slide 1 */}
+                <div className="relative w-full">
+                    <img
+                        className="w-full h-[50vh] md:h-[70vh] object-cover"
+                        src={header}
+                        alt="Header"
+                    />
                     <Link to="/card">
-                        <button className="hover:scale-105 duration-500 left-25 cursor-pointer p-1 border border-yellow-600 text-yellow-600 text-2xl w-45 relative bottom-30 font-serif hover:bg-gray-300">
+                        <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
+                            md:bottom-16 md:left-12 md:translate-x-0
+                            px-4 py-2 border border-yellow-600 text-yellow-600 
+                            text-lg md:text-2xl font-serif bg-white/70 hover:bg-yellow-100 
+                            hover:scale-105 duration-300 rounded">
                             Shop now
                         </button>
                     </Link>
                 </div>
 
-                <div>
-                    <img className="w-[100vw] h-[45vw]" src={combined} alt="Combined" />
+                {/* Slide 2 */}
+                <div className="relative w-full">
+                    <img
+                        className="w-full h-[50vh] md:h-[70vh] object-cover"
+                        src={combined}
+                        alt="Combined"
+                    />
                     <Link to="/card">
-                        <button className="hover:scale-105 duration-500 left-25 cursor-pointer p-1 border border-yellow-600 text-yellow-600 text-2xl w-45 relative bottom-60 font-serif hover:bg-gray-300">
+                        <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
+                            md:bottom-24 md:left-20 md:translate-x-0
+                            px-4 py-2 border border-yellow-600 text-yellow-600 
+                            text-lg md:text-2xl font-serif bg-white/70 hover:bg-yellow-100 
+                            hover:scale-105 duration-300 rounded">
                             Shop now
                         </button>
                     </Link>
                 </div>
 
-                <div>
-                    <img className="w-[100vw] h-[45vw]" src={headera} alt="Header A" />
+                {/* Slide 3 */}
+                <div className="relative w-full">
+                    <img
+                        className="w-full h-[50vh] md:h-[70vh] object-cover"
+                        src={headera}
+                        alt="Header A"
+                    />
                     <Link to="/card">
-                        <button className="hover:scale-105 duration-500 cursor-pointer p-1 border border-yellow-600 text-yellow-600 text-2xl w-45 relative bottom-40 left-144 font-serif hover:bg-gray-300">
+                        <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
+                            md:bottom-20 md:left-[70%] md:translate-x-0
+                            px-4 py-2 border border-yellow-600 text-yellow-600 
+                            text-lg md:text-2xl font-serif bg-white/70 hover:bg-yellow-100 
+                            hover:scale-105 duration-300 rounded">
                             Shop now
                         </button>
                     </Link>

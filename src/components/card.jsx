@@ -83,35 +83,35 @@ function Header() {
             <div className='flex flex-col items-center cursor-pointer bg-gray-50 mt-2 mb-7'>
                 <div className='p-5 flex gap-5 justify-center flex-wrap'>
                     {filter_datas.map((data) => (
-                        <div key={data.id} className='h-106 w-75 flex-col rounded-lg mb-9'>
-                            <button
-                                className='flex relative items-center h-9 p-1.5 left-64 top-12 w-8 object-cover rounded-2xl text-3xl bg-white hover:scale-125 duration-300'
+                        <div key={data.id} className='md:h-106 md:w-75 w-40  flex-col rounded-lg md:mb-9'>
+                            <p
+                                className='flex relative items-center h-0 md:h-9 p-1.5 left-30  md:left-64 top-7 md:top-12 w-8 object-cover rounded-2xl text-3xl bg-white hover:scale-125 duration-300'
                                 onClick={() => setDataInWishList(data)}
                             >
                                 <img className='w-6 cursor-pointer' src={wishlistheart(data)} alt="Wishlist Icon" />
-                            </button>
+                            </p>
 
                             <Link to={`/product/${data.id}`}>
-                                <div className='h-75 w-75'>
+                                <div className='md:h-75 md:w-75 w-40'>
                                     <img
                                         src={imagechange(data)}
                                         alt="Product"
-                                        className="object-cover h-75 w-75 transition-all duration-300"
+                                        className="object-cover md:h-75 md:w-75 w-40 transition-all duration-300"
                                         onMouseEnter={() => setHoveredId(data.id)}
                                         onMouseLeave={() => setHoveredId(null)}
                                     />
                                 </div>
                                 <div className='pl-3 flex flex-col items-start bg-white pt-2'>
-                                    <p className='text-yellow-600 text-xs font-serif w-58 truncate'>{data.title}</p>
-                                    <p className='font-bold font-sans mb-2'>
+                                    <p className='text-yellow-600 text-xs font-serif md:w-58 w-36 truncate'>{data.title}</p>
+                                    <p className='font-bold flex flex-col gap-0 md:gap-1 md:flex-row font-sans mb-2'>
                                         ₹{data.price}
-                                        <span className='text-xs'>(MRP Inclusive of all taxes)</span>
+                                        <span className='text-xs relative md:top-1'>(MRP Inclusive of all taxes)</span>
                                     </p>
                                 </div>
                             </Link>
 
                             <button
-                                className='bg-zinc-900 text-stone-50 text-lg hover:bg-yellow-600 rounded-lg cursor-pointer w-75 h-11 font-serif'
+                                className='bg-zinc-900 text-stone-50 md:text-lg text-sm hover:bg-yellow-600 rounded-lg cursor-pointer md:w-75 w-40 h-11 font-serif'
                                 onClick={() => {
                                     setQuantity(quantity + 1);
                                     if (quantity > 0) {

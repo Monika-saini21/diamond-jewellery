@@ -1,37 +1,63 @@
 import React from 'react'
-import Category from './category';
+import { Link } from 'react-router-dom'
 import banner from '../assets/banner.jpg'
 import banner2 from '../assets/banner2.jpg'
-import { Link,  } from 'react-router-dom'
-function Items(){
-    return(<>
-         <div className=' flex  justify-end  items-end' >
-             <img className='w-140 h-114 m-17 ' src={banner} alt="" />
-         </div>
-         <div className='flex flex-col relative left-25 bottom-115 w-200 h-0 gap-5'   >
-            <p className='text-4xl w-150 '>
-            Exquisite Diamond Jewelry for <br></br>Every Occasion
-            </p>
-            <p className=' w-150'>Discover a dazzling collection of fine diamond jewelry, crafted to <br></br>
-            perfection. Whether it's an engagement ring, a wedding band, or a<br></br> 
-            special gift for someone you love, our expertly designed pieces reflect<br></br> 
-            elegance, sophistication, and timeless beauty. Each diamond is <br></br>
-            meticulously sourced and set with precision to ensure the highest<br></br> 
-            quality and lasting brilliance.</p>
-           <Link to={'/card'}><button class=' hover:scale-105 duration-500  cursor-pointer p-1 h-12 border-1 border-b-1 border-yellow-600 text-yellow-600 text-2xl border-x-1 w-45 relative font-serif ...' >Shop now  </button></Link> 
-         </div>
-         <div>
-         <img className=' h-95 w-400 mt-10 ' src={banner2} alt="" />
-         <p className='flex relative h-0 w-140 left-150 bottom-80 text-amber-50 text-6xl'>Be The First To Get<br></br> Limited Editions</p>
-         <Link to={'/card'}><button class=' hover:scale-105 duration-500 left-180 cursor-pointer p-1 border-1 border-b-1 border-yellow-600 text-yellow-600 text-2xl border-x-1  w-45 relative bottom-30 font-serif  ...' >Shop now  </button></Link> 
-         </div>
-        </>
 
+function Items() {
+  return (
+    <>
+      {/* Banner 1 */}
+      <div className="w-full  flex flex-col md:flex-row-reverse justify-center px-4 md:px-25 md:justify-end">
+        <img
+          className="w-full md:w-[560px] md:h-[460px] object-cover"
+          src={banner}
+          alt="Banner"
+        />
+     
 
+      {/* Text Section */}
+      <div className="flex flex-col gap-5 p-5 md:pr-20 md:pt-14 max-w-3xl mx-auto text-center md:text-left">
+        <p className="text-2xl md:text-4xl font-semibold">
+          Exquisite Diamond Jewelry for <br /> Every Occasion
+        </p>
+        <p className="text-sm md:text-lg leading-relaxed">
+          Discover a dazzling collection of fine diamond jewelry, crafted to
+          perfection. Whether it's an engagement ring, a wedding band, or a
+          special gift for someone you love, our expertly designed pieces
+          reflect elegance, sophistication, and timeless beauty. Each diamond is
+          meticulously sourced and set with precision to ensure the highest
+          quality and lasting brilliance.
+        </p>
+        <Link to="/card">
+          <button className="hover:scale-105 duration-500 cursor-pointer px-5 py-2 border border-yellow-600 text-yellow-600 text-lg md:text-2xl font-serif hover:bg-yellow-50 rounded">
+            Shop now
+          </button>
+        </Link>
+      </div>
+    </div>
+      {/* Banner 2 */}
+      <div className="relative md:mt-20 mt-10">
+        <img
+          className="w-full h-[250px] md:h-[380px] "
+          src={banner2}
+          alt="Banner 2"
+        />
+        <div className="absolute inset-0 flex flex-col gap-1 items-center md:items-center justify-center p-5 md:p-20 text-center md:text-left">
+          <p className="text-white text-2xl md:text-6xl font-bold drop-shadow-lg">
+            Be The First
+            </p> 
+            <p className="text-white text-2xl md:text-6xl font-bold drop-shadow-lg">
+             To Get  Limited Editions
+          </p>
+          <Link to="/card">
+            <button className="md:mt-14 mt-5 hover:scale-105 duration-500 cursor-pointer px-5 py-2 border border-yellow-500 text-yellow-400 text-lg md:text-2xl font-serif hover:bg-yellow-50  rounded">
+              Shop now
+            </button>
+          </Link>
+        </div>
+      </div>
+    </>
+  )
+}
 
-
-
-     );
- }
-export default Items;
-
+export default Items

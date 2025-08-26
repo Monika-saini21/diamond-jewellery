@@ -116,7 +116,7 @@ function Products(){
             console.log(filter_datas)
     return(
         
-        <div className='flex mb-9'>
+        <div className='flex md:flex-row flex-col mb-9'>
                    {selectedImage && (
         <div className="fixed inset-0 bg-black   bg-opacity-70 flex items-center justify-center z-50" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Big view" className="max-w-full max-h-full rounded" />
