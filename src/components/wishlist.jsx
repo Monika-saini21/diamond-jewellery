@@ -3,7 +3,7 @@ import { UserContext } from "./context.js";
 import ring from "../assets/ring.jpg";
 import earring from "../assets/earring.jpg";
 import necklace from "../assets/necklace.jpg";
-import bracelet from "../assets/bracelates.jpg";
+import bracelates from "../assets/bracelates.jpg";
 import { Link } from "react-router-dom";
 
 function Wishlist() {
@@ -30,27 +30,27 @@ function Wishlist() {
 
   return (
     <>
-      <h1 className="ml-145 p-3 text-yellow-600 border-b-2 text-3xl w-48 border-yellow-600">
+      <h1 className="md:ml-145 ml-30 p-3 text-yellow-600 border-b-2 text-2xl md:text-3xl md:my-0 my-9 w-38 md:w-48 border-yellow-600">
         My Wishlist
       </h1>
 
-      <div className="flex justify-start ml-13 gap-5 flex-wrap">
+      <div className="flex md:justify-start md:ml-13 md:gap-5 gap-3 flex-wrap">
         {wishListItem?.length > 0 ? (
           wishListItem.map((item) => (
             <div
               key={item.id}
-              className="h-106 w-75 rounded-b-lg mb-10 mt-20 shadow hover:shadow-lg transition"
+              className="md:h-106 md:w-75 w-46 rounded-b-lg mb-10  shadow hover:shadow-lg transition"
             >
               <img
-                className="h-75 w-75 object-cover"
+                className="md:h-75 md:w-75 object-cover"
                 src={item?.image}
                 alt={item?.title}
               />
-              <div className="flex flex-col items-start bg-white pt-2 px-2">
-                <p className="text-yellow-600 text-xs font-serif w-58 truncate">
+              <div className="flex flex-col items-start bg-white pt-2 ">
+                <p className="text-yellow-600 text-xs ml-2 font-serif md:w-58 w-40 truncate">
                   {item?.title}
                 </p>
-                <p className="font-bold font-sans mb-2">
+                <p className="font-bold font-sans ml-2 mb-2">
                   ₹{item?.price}
                   <span className="text-xs block">
                     (MRP Inclusive of all taxes)
@@ -59,7 +59,7 @@ function Wishlist() {
 
                 <button
                   onClick={() => addData(item)}
-                  className="bg-zinc-900 text-white text-lg hover:bg-yellow-600 rounded-lg cursor-pointer w-65 h-11 font-serif transition"
+                  className="bg-zinc-900 text-white text-lg hover:bg-yellow-600 rounded-lg cursor-pointer w-46 md:w-65 h-11 font-serif transition"
                 >
                   Move to Cart
                 </button>
@@ -68,7 +68,7 @@ function Wishlist() {
           ))
         ) : (
           <div>
-            <div className="flex flex-col justify-center items-center w-310 text-center">
+            <div className="flex flex-col justify-center items-center md:w-310 text-center">
               <p className="text-gray-700 font-bold text-3xl">
                 It feels so empty in here
               </p>
@@ -91,48 +91,31 @@ function Wishlist() {
             </div>
 
             {/* Categories */}
-            <div className="flex justify-center items-center mt-10 mb-10 space-x-6">
-              <Link to="/card/rings">
-                <img
-                  className="w-70 h-85 cursor-pointer hover:scale-105 duration-500"
-                  src={ring}
-                  alt="Rings"
-                />
-                <p className="flex relative bottom-9 left-25 text-amber-50">
-                  Rings
-                </p>
-              </Link>
-              <Link to="/card/necklace">
-                <img
-                  className="w-70 h-85 cursor-pointer hover:scale-105 duration-500"
-                  src={necklace}
-                  alt="Necklaces"
-                />
-                <p className="flex relative bottom-9 left-25 text-amber-50">
-                  Necklaces
-                </p>
-              </Link>
-              <Link to="/card/bracelet">
-                <img
-                  className="w-70 h-85 cursor-pointer hover:scale-105 duration-500"
-                  src={bracelet}
-                  alt="Bracelets"
-                />
-                <p className="flex relative bottom-9 left-25 text-amber-50">
-                  Bracelets
-                </p>
-              </Link>
-              <Link to="/card/earring">
-                <img
-                  className="w-70 h-85 cursor-pointer hover:scale-105 duration-500"
-                  src={earring}
-                  alt="Earrings"
-                />
-                <p className="flex w-20 relative bottom-9 left-25 text-amber-50">
-                  Earrings
-                </p>
-              </Link>
-            </div>
+           <div className="max-w-screen px-4 md:px-25 my-20 md:my-30">
+                       <div className="grid grid-cols-2 gap-6 md:flex md:justify-center md:items-center md:space-x-6">
+                           
+                           <Link to={"/card/rings"} className="text-center">
+                               <img className="w-full h-48 md:w-68 md:h-85 object-cover md:rounded-none rounded-lg cursor-pointer hover:scale-105 duration-500" src={ring} alt="Ring" />
+                               <p className="w-10 flex relative bottom-6 md:bottom-9 left-16 h-0 md:left-25 text-amber-50">Rings</p>
+                           </Link>
+           
+                           <Link to={"/card/necklace"} className="text-center">
+                               <img className="w-full h-48 md:w-68 md:h-85 object-cover md:rounded-none rounded-lg cursor-pointer hover:scale-105 duration-500" src={necklace} alt="Necklace" />
+                               <p className="w-10 flex relative bottom-6 md:bottom-9 left-11 h-0 md:left-25 text-amber-50">Necklaces</p>
+                           </Link>
+           
+                           <Link to={"/card/bracelet"} className="text-center">
+                               <img className="w-full h-48 md:w-68 md:h-85 object-cover md:rounded-none rounded-lg cursor-pointer hover:scale-105 duration-500" src={bracelates} alt="Bracelet" /> 
+                               <p className="w-10 flex relative bottom-6 md:bottom-9 left-13 h-0 md:left-25 text-amber-50">Bracelets</p>
+                           </Link>
+           
+                           <Link to={"/card/earring"} className="text-center">
+                               <img className="w-full h-48 md:w-68 md:h-85 object-cover md:rounded-none rounded-lg cursor-pointer hover:scale-105 duration-500" src={earring} alt="Earring" />
+                               <p className="w-10 flex relative bottom-6 md:bottom-9 left-13 h-0 md:left-25 text-amber-50">Earrings</p>
+                           </Link>
+           
+                       </div>
+                   </div>
           </div>
         )}
       </div>

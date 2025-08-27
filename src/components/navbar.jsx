@@ -84,7 +84,7 @@ function Navbar() {
   onSubmit={handleSearchSubmit}
 >
   <input
-    className="border absolute top-16 right-1 bg-white  pl-5 w-96 h-10"
+    className="border absolute top-16 w-full right-0.5 bg-white  pl-5  h-10"
     type="text"
     placeholder="Search..."
     value={searchlist}

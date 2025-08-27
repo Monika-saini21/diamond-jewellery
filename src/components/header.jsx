@@ -54,7 +54,7 @@ function Header() {
                         <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
                             md:bottom-24 md:left-20 md:translate-x-0
                             px-4 py-2 border border-yellow-600 text-yellow-600 
-                            text-lg md:text-2xl font-serif bg-white/70 hover:bg-yellow-100 
+                            text-lg md:text-2xl font-serif  hover:bg-yellow-100 
                             hover:scale-105 duration-300 rounded">
                             Shop now
                         </button>
@@ -70,9 +70,9 @@ function Header() {
                     />
                     <Link to="/card">
                         <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
-                            md:bottom-20 md:left-[70%] md:translate-x-0
+                            md:bottom-20 md:left-[45%] md:translate-x-0
                             px-4 py-2 border border-yellow-600 text-yellow-600 
-                            text-lg md:text-2xl font-serif bg-white/70 hover:bg-yellow-100 
+                            text-lg md:text-2xl font-serif  hover:bg-yellow-100 
                             hover:scale-105 duration-300 rounded">
                             Shop now
                         </button>

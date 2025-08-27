@@ -14,7 +14,7 @@ function Footer() {
             Diamond Emporium is a family-run company and a leading exporter of
             high-quality polished diamonds and jewellery.
           </p>
-          <img className="mt-4 w-24" src={insta} alt="Instagram" />
+          <img className="mt-4 md:w-35 md:relative md:right-3 w-24" src={insta} alt="Instagram" />
         </div>
 
        <div className="flex md:gap-50 gap-18 mb-6">    

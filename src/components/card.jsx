@@ -59,7 +59,7 @@ function Header() {
             {Category.id === "necklace" && (
                 <div>
                     <img className='w-[100vw] h-80' src={nacklacebanner} alt="Necklaces" />
-                    <p className='absolute top-37 left-70 text-gray-100 text-6xl'>NECKLACES</p>
+                    <p className='absolute top-37 md:left-70 text-gray-100 text-6xl'>NECKLACES</p>
                     <p className='absolute top-59 left-65 text-gray-100 text-3xl'>Elegance that lasts forever</p>
                 </div>
             )}
@@ -67,23 +67,23 @@ function Header() {
             {Category.id === "bracelet" && (
                 <div>
                     <img className='w-[100vw] h-80' src={braceletbanner} alt="Bracelets" /> {/* ✅ updated */}
-                    <p className='absolute top-37 left-70 text-gray-100 text-6xl'>BRACELETS</p>
-                    <p className='absolute top-59 left-65 text-gray-100 text-3xl'>A warm hug for your wrists</p>
+                    <p className='absolute top-37 md:left-70 text-gray-100 text-6xl'>BRACELETS</p>
+                    <p className='absolute top-59 md:left-65 text-gray-100 text-3xl'>A warm hug for your wrists</p>
                 </div>
             )}
 
             {Category.id === "earring" && (
                 <div>
                     <img className='w-[100vw] h-80' src={earringbanner} alt="Earrings" />
-                    <p className='absolute top-37 left-70 text-gray-100 text-6xl'>EARRINGS</p>
-                    <p className='absolute top-59 left-65 text-gray-100 text-3xl'>Timeless sophistication</p>
+                    <p className='absolute top-37 md:left-70 text-gray-100 text-6xl'>EARRINGS</p>
+                    <p className='absolute top-59 md:left-65 text-gray-100 text-3xl'>Timeless sophistication</p>
                 </div>
             )}
 
-            <div className='flex flex-col items-center cursor-pointer bg-gray-50 mt-2 mb-7'>
-                <div className='p-5 flex gap-5 justify-center flex-wrap'>
+            <div className='flex mt-7 flex-wrap gap-1 justify-center items-center cursor-pointer bg-gray-50 md:mt-2 mb-7'>
+               
                     {filter_datas.map((data) => (
-                        <div key={data.id} className='md:h-106 md:w-75 w-40  flex-col rounded-lg md:mb-9'>
+                        <div key={data.id} className='md:h-106 md:w-75 w-45  flex-col rounded-lg md:mb-9'>
                             <p
                                 className='flex relative items-center h-0 md:h-9 p-1.5 left-30  md:left-64 top-7 md:top-12 w-8 object-cover rounded-2xl text-3xl bg-white hover:scale-125 duration-300'
                                 onClick={() => setDataInWishList(data)}
@@ -92,11 +92,11 @@ function Header() {
                             </p>
 
                             <Link to={`/product/${data.id}`}>
-                                <div className='md:h-75 md:w-75 w-40'>
+                                <div className='md:h-75 md:w-75  h-45 w-45'>
                                     <img
                                         src={imagechange(data)}
                                         alt="Product"
-                                        className="object-cover md:h-75 md:w-75 w-40 transition-all duration-300"
+                                        className="object-cover md:h-75 md:w-75 w-45 transition-all duration-300"
                                         onMouseEnter={() => setHoveredId(data.id)}
                                         onMouseLeave={() => setHoveredId(null)}
                                     />
@@ -111,7 +111,7 @@ function Header() {
                             </Link>
 
                             <button
-                                className='bg-zinc-900 text-stone-50 md:text-lg text-sm hover:bg-yellow-600 rounded-lg cursor-pointer md:w-75 w-40 h-11 font-serif'
+                                className='bg-zinc-900 text-stone-50 md:text-lg text-sm hover:bg-yellow-600 rounded-lg cursor-pointer md:w-75 w-45 h-11 font-serif'
                                 onClick={() => {
                                     setQuantity(quantity + 1);
                                     if (quantity > 0) {
@@ -126,7 +126,7 @@ function Header() {
                         </div>
                     ))}
                 </div>
-            </div>
+           
         </>
     );
 }
