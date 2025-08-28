@@ -1,7 +1,7 @@
 import ring from '../assets/ring.jpg';
  import earring from '../assets/earring.jpg';
   import necklace from '../assets/necklace.jpg';
-   import bracelet from '../assets/bracelates.jpg';
+   import bracelet from '../assets/bracelet.jpg';
     import { Link } from 'react-router-dom'; 
     function Category() { 
         return ( 
