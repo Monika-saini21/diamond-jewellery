@@ -66,53 +66,77 @@ function Card() {
     Category.id ? data.category === Category.id : data
   );
 
-  // ✅ Render category banner dynamically
-  const bannerData = {
-    rings: {
-      img: ringbanner,
-      title: "RINGS",
-      subtitle: "Timeless Sparkle for Every Occasion",
-    },
-    necklace: {
-      img: nacklacebanner,
-      title: "NECKLACES",
-      subtitle: "Elegance that lasts forever",
-    },
-    bracelet: {
-      img: braceletbanner,
-      title: "BRACELETS",
-      subtitle: "A warm hug for your wrists",
-    },
-    earring: {
-      img: earringbanner,
-      title: "EARRINGS",
-      subtitle: "Timeless sophistication",
-    },
-  };
 
-  const currentBanner = bannerData[Category.id];
+ 
 
   return (
     <>
       {/* ✅ Banner */}
-      {currentBanner && (
-        <div className="relative">
-          <img
-            className="w-full h-80 object-cover"
-            src={currentBanner.img}
-            alt={currentBanner.title}
-          />
-          <p className="absolute top-36 left-1/2 -translate-x-1/2 text-gray-100 text-6xl">
-            {currentBanner.title}
+ {/* ✅ Category Banners */}
+      {Category.id === "rings" && (
+        <div>
+        <img className="w-[100vw]  object-cover object-left h-60 md:h-80" src={ringbanner} alt="Rings" />
+        <div className="absolute md:right-60 right-3 md:top-40 top-50 ">
+          
+          <p className=" text-gray-100 md:mb-4 text-center text-3xl md:text-6xl">
+            RINGS
           </p>
-          <p className="absolute top-56 left-1/2 -translate-x-1/2 text-gray-100 text-3xl">
-            {currentBanner.subtitle}
+          <p className=" text-gray-100 text-center text-xxl md:text-3xl">
+            Timeless Sparkle for Every Occasion
+          </p>
+        </div>
+        </div>
+      )}
+      {Category.id === "necklace" && (
+        <div>
+          <img className="w-[100vw]  h-60 md:h-80" src={nacklacebanner} alt="Necklaces" />
+          <div className="absolute md:left-60 left-9 md:top-40 top-45 ">
+          <p className="text-gray-100 md:mb-4  text-3xl md:text-6xl">
+            NECKLACES
+          </p>
+          <p className=" text-gray-100 text-end md:pl-0 pl-2 text-xxl md:text-3xl">
+            Elegance that lasts forever
+          </p>
+        </div>
+        </div>
+      )}
+      {Category.id === "bracelet" && (
+        <div>
+          <img
+            className="w-[100vw] object-cover h-80"
+            src={braceletbanner}
+            alt="Bracelets"
+          />
+          <p className="absolute md:top-36 top-55 left-10 md:left-48 text-3xl md:text-6xl text-gray-100 ">
+            BRACELETS
+          </p>
+          <p className="absolute md:top-56 top-65 left-14 md:left-44 text-xxl md:text-3xl text-gray-100 ">
+            A warm hug for your wrists
           </p>
         </div>
       )}
+      {Category.id === "earring" && (
+        <div>
+          <img
+            className="w-[100vw]  mt-10 h-50 md:h-80"
+            src={earringbanner}
+            alt="Earrings"
+          />
+          <div className="absolute md:left-60 left-9 md:top-40 top-40">
+          <p className="text-gray-100 md:mb-4  text-3xl md:text-6xl">
+            EARRINGS
+          </p>
+          <p className=" text-gray-100 text-end md:pl-0 pl-2 text-xxl md:text-3xl">
+          
+            Timeless sophistication
+          </p>
+        </div>
+        </div>
+      )}
+
 
       {/* ✅ Product Grid */}
-      <div className="flex mt-7 flex-wrap md:gap-5 gap-1 justify-center items-center bg-gray-50 md:mt-2 mb-7">
+      <div className="flex  flex-wrap md:gap-5 gap-1 justify-center items-center bg-gray-50 pt-13 pb-7">
         {filter_datas.map((data) => (
           <div
             key={data.id}

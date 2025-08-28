@@ -12,9 +12,9 @@ function OrderedPlaced() {
             <hr className='w-10  text-yellow-600  '></hr>
             <p className='text-8xl text-yellow-600  md:pb-18 pb-14'>. </p>
             <p className='w-17  font-bold text-yellow-600   md:pl-1 text-sm'>payment</p>
-            <hr className='w-10 '></hr>
-            <p className='text-8xl  pb-14 md:pb-18'>. </p>
-            <p className='w-17  font-bold md:pl-2 text-sm'>orderedplaced</p>
+            <hr className='w-10 text-yellow-600 '></hr>
+            <p className='text-8xl  pb-14 text-yellow-600  md:pb-18'>. </p>
+            <p className='w-17  font-bold text-yellow-600  md:pl-2 text-sm'>orderedplaced</p>
         </div>
 
       {/* Order Confirmation */}
