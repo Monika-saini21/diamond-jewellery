@@ -230,7 +230,7 @@ function Products(){
          <div>
          { product.category=="rings" &&
          <div className='flex mt-3'>
-         <p className='text-2xl mt-1 mr-3'>Ring size:</p>
+         <p className='md:text-2xl text-xl mt-1 mr-3'>Ring size:</p>
          <label htmlFor="State"></label>
         <select className=" bg-gray-100  p-1 rounded-lg h-11 w-[68%]" name="State" id="" placeholder="State" >
         <option className='font-bold bg-stone-700 text-white'>Select Size</option>

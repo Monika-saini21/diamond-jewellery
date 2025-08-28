@@ -7,21 +7,21 @@ function checkout() {
     const navigate=useNavigate()
   return (
     <div>
-         <div className='flex justify-center items-center mr-14 h-20'>
+         <div className='flex justify-center items-center md:mr-14 w-80 md:w-full mx-4 md:mx-0 md:mt-0 mt-8 max-w-screen h-20'>
             <hr className='w-10 text-yellow-600 '></hr>
-            <p className='text-8xl text-yellow-600  pb-18'>. </p>
-            <p className='w-17 pb-11 font-bold mt-11 text-yellow-600   pl-1 text-sm'>checkout</p>
+            <p className='text-8xl text-yellow-600  pb-14 md:pb-18'>. </p>
+            <p className='w-17 pb-11 font-bold mt-11 text-yellow-600   md:pl-1 text-sm'>checkout</p>
             <hr className='w-10   '></hr>
-            <p className='text-8xl  pb-18'>. </p>
-            <p className='w-17  font-bold   pl-1 text-sm'>payment</p>
+            <p className='text-8xl  md:pb-18 pb-14'>. </p>
+            <p className='w-17  font-bold   md:pl-1 text-sm'>payment</p>
             <hr className='w-10 '></hr>
-            <p className='text-8xl  pb-18'>. </p>
-            <p className='w-17  font-bold pl-2 text-sm'>orderedplaced</p>
+            <p className='text-8xl  pb-14 md:pb-18'>. </p>
+            <p className='w-17  font-bold md:pl-2 text-sm'>orderedplaced</p>
         </div>
             <div className="flex flex-col items-center mt-5">
 
 <p className="text-2xl text-yellow-600 font-bold font mb-5 ">Delivery Address</p>
-<form className=" shadow-lg shadow-gray-400 flex flex-col p-5 gap-2 rounded-lg mb-5 w-[60vw] " onSubmit={(e)=>{
+<form className=" shadow-lg shadow-gray-400 flex  flex-col p-5 gap-2 rounded-lg mb-5 m-4 md:w-[60vw] " onSubmit={(e)=>{
     e.preventDefault()
     navigate("/payment")
     
@@ -108,7 +108,7 @@ function checkout() {
 
   
 
-    <button type="submit" className=" self-center mt-5 mb-2 w-[40%] mr-2 bg-yellow-600  text-white p-2  rounded-md hover:text-yellow-600 hover:border-2 hover:border-yellow-600 hover:scale-105 hover:bg-white  duration-300">Proceed To Saving and Payment</button>
+    <button type="submit" className=" self-center mt-5 mb-2 md:w-[40%] mr-2 bg-yellow-600  text-white p-2  rounded-md hover:text-yellow-600 hover:border-2 hover:border-yellow-600 hover:scale-105 hover:bg-white  duration-300">Proceed To Saving and Payment</button>
 
 </form>
 </div> 

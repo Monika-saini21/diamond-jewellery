@@ -112,24 +112,23 @@ function Card() {
       )}
 
       {/* ✅ Product Grid */}
-      <div className="flex mt-7 flex-wrap gap-5 justify-center items-center bg-gray-50 md:mt-2 mb-7">
+      <div className="flex mt-7 flex-wrap md:gap-5 gap-1 justify-center items-center bg-gray-50 md:mt-2 mb-7">
         {filter_datas.map((data) => (
           <div
             key={data.id}
-            className="md:h-106 relative md:w-75 w-45 flex-col rounded-lg shadow bg-white "
+            className="md:h-106 relative md:w-75 w-45 flex-col rounded-lg shadow bg-white"
           >
             {/* Wishlist Button */}
-           <button
-  className="absolute top-2 right-2 p-2 bg-white rounded-full hover:scale-110 duration-300"
-  onClick={() => setDataInWishList(data)}
->
-  <img
-    className="w-6"
-    src={wishlistheart(data)}
-    alt="Wishlist Icon"
-  />
-</button>
-
+            <button
+              className="absolute top-2 right-2 p-2 bg-none md:bg-white rounded-full hover:scale-110 duration-300"
+              onClick={() => setDataInWishList(data)}
+            >
+              <img
+                className="w-6"
+                src={wishlistheart(data)}
+                alt="Wishlist Icon"
+              />
+            </button>
 
             {/* Product Image */}
             <Link to={`/product/${data.id}`}>
@@ -145,7 +144,7 @@ function Card() {
 
               {/* Product Info */}
               <div className="p-3 flex flex-col items-start">
-                <p className="text-yellow-600 text-xs font-serif truncate">
+                <p className="text-yellow-600 text-xs font-serif w-38 md:w-45 truncate">
                   {data.title}
                 </p>
                 <p className="font-bold flex flex-col gap-1 md:flex-row font-sans mb-2">
