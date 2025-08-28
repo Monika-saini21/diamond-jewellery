@@ -12,6 +12,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.38.1",
     "@material-tailwind/react": "^2.1.10",
+    "@neondatabase/serverless": "^1.0.1",
     "@tailwindcss/vite": "^4.0.12",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
