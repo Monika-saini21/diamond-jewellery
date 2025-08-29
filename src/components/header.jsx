@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import header from '../assets/header.jpg';
 import headera from '../assets/headera.jpg';
-import combined from '../assets/combined.jpg';
+import header1 from '../assets/header1.jpg';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -26,50 +26,64 @@ function Header() {
                 className="w-full overflow-hidden"  // <-- force full width
             >
                 {/* Slide 1 */}
-                <div className="relative w-full">
+                <div className="relative md:top-0 top-5 w-full">
                     <img
-                        className="w-full h-[50vh] md:h-[70vh] object-cover"
+                        className="w-full h-[40vh]  md:h-[80vh]  object-cover object-right"
                         src={header}
                         alt="Header"
                     />
+                    <div className='absolute bottom-24 left-4  w-50 md:w-140 flex flex-col md:gap-4  text-white 
+                            md:bottom-20 md:left-25 '>
+                    <p className='md:text-5xl  text-md'>You deserve the most </p>
+                    <hr className= 'absolute md:w-20 top-7  right-4 text-yellow-600'></hr>
+                    <p className='text-2xl md:text-7xl'>Unique Jewellery</p>
+                    <p className='text-xs md:text-lg'>As human beings, we're very materialistic and have all this 
+                        stuff - furs and cars and diamonds and money</p>
                     <Link to="/card">
-                        <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
-                            md:bottom-16 md:left-12 md:translate-x-0
-                            px-4 py-2 border border-yellow-600 text-yellow-600 
-                            text-lg md:text-2xl font-serif bg-white/70 hover:bg-yellow-100 
+                        <button className=" 
+                             md:translate-x-0 md:mt-10 mt-3
+                            px-4 md:py-2 py-1 border border-yellow-600 text-yellow-600 
+                            text-sm md:text-2xl  hover:bg-yellow-100 
                             hover:scale-105 duration-300 rounded">
                             Shop now
                         </button>
                     </Link>
+                    </div>
                 </div>
 
                 {/* Slide 2 */}
-                <div className="relative w-full">
+                <div className="relative md:top-0 top-5 w-full">
                     <img
-                        className="w-full h-[50vh] md:h-[70vh] object-cover"
-                        src={combined}
+                        className="w-full h-[40vh]  md:h-[80vh]  object-cover object-right"
+                        src={header1}
                         alt="Combined"
                     />
+                    <div className='absolute bottom-26 left-4  w-40 md:w-140 flex flex-col md:gap-4  text-white 
+                            md:bottom-30 md:left-25 '>
+                    <p className='text-2xl md:text-7xl'>New arrivel </p>
+                  
+                    <p className=' md:text-5xl  text-md'>Bringing the best in You</p>
+               
                     <Link to="/card">
-                        <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
-                            md:bottom-24 md:left-20 md:translate-x-0
-                            px-4 py-2 border border-yellow-600 text-yellow-600 
-                            text-lg md:text-2xl font-serif  hover:bg-yellow-100 
+                        <button className=" md:translate-x-0 md:mt-10 mt-7
+                            px-4 md:py-2 py-1 border border-yellow-600 text-yellow-600 
+                            text-sm md:text-2xl  hover:bg-yellow-100 
                             hover:scale-105 duration-300 rounded">
                             Shop now
                         </button>
                     </Link>
                 </div>
+                </div>
 
                 {/* Slide 3 */}
-                <div className="relative w-full">
+                <div className="relative md:top-0 top-5 w-full">
                     <img
-                        className="w-full h-[50vh] md:h-[70vh] object-cover"
+                        className="w-full h-[40vh]  md:h-[80vh]  object-cover "
                         src={headera}
                         alt="Header A"
                     />
                     <Link to="/card">
-                        <button className="absolute bottom-6 left-1/2 -translate-x-1/2 
+                        <button className="absolute bottom-10 left-55 -translate-x-1/2 
                             md:bottom-20 md:left-[45%] md:translate-x-0
                             px-4 py-2 border border-yellow-600 text-yellow-600 
                             text-lg md:text-2xl font-serif  hover:bg-yellow-100 

@@ -128,19 +128,19 @@ function Products(){
           <div className='  md:w-110 max-w-screen md:1/2 md:ml-45 overflow-hidden top-13 bottom-10 md:sticky md:h-145 '>
           <Slider {...settings}>
             <div className=' mt-12 max-w-screen  md:ml-5 ml-0 '>
-           <img className='h-100 max-w-screen  md:shadow-lg   shadow-none shadow-gray-400  object-cover transition-transform 
+           <img className='md:h-100 max-w-screen  md:shadow-lg   shadow-none shadow-gray-400  object-cover transition-transform 
            duration-300 ease-in-out hover:scale-110' src={product.image} alt="Zoom"  onClick={() => setSelectedImage(product.image)} />
            </div>
            <div className=' mt-12 max-w-screen  md:ml-5 ml-0'>
-           <img className='h-100 max-w-screen  md:shadow-lg  shadow-none  shadow-gray-400  object-cover transition-transform 
+           <img className='md:h-100 max-w-screen  md:shadow-lg  shadow-none  shadow-gray-400  object-cover transition-transform 
            duration-300 ease-in-out hover:scale-110' src={product.img} alt="Zoom"  onClick={() => setSelectedImage(product.img)} />
            </div>
            <div className=' mt-12 max-w-screen  md:ml-5 ml-0'>
-            <img className='h-100 max-w-screen  md:shadow-lg shadow-none   shadow-gray-400  object-cover transition-transform 
+            <img className='md:h-100 max-w-screen  md:shadow-lg shadow-none   shadow-gray-400  object-cover transition-transform 
            duration-300 ease-in-out hover:scale-110' src={product.imge} alt="Zoom"  onClick={() => setSelectedImage(product.imge)}/>
            </div>
            <div className=' mt-12 max-w-screen  md:ml-5 ml-0'>
-            <img className='h-100 max-w-screen  md:shadow-lg  shadow-none  shadow-gray-400  object-cover transition-transform 
+            <img className='md:h-100 max-w-screen  md:shadow-lg  shadow-none  shadow-gray-400  object-cover transition-transform 
            duration-300 ease-in-out hover:scale-110' src={product.im} alt="Zoom"  onClick={() => setSelectedImage(product.im)} />
            </div>
            </Slider>
@@ -393,7 +393,7 @@ function Products(){
             </div>
           </div>
           <h className="text-2xl ml-4 font-semi-bold "> Similar Products</h>
-          <div className='bg-gray-100 md:gap-3 gap-1 md:w-113 max-w-screen mx-4 flex flex-wrap  '>
+          <div className='bg-gray-100 md:gap-3 gap-1 md:w-113 max-w-screen mx-4 flex  just-center flex-wrap  '>
           
           { category_datas.map((data)=>
           
